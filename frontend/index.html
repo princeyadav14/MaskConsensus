@@ -12,17 +12,17 @@
     <div class="background-glow"></div>
     <div class="background-grid"></div>
 
-    <nav class="border-b border-[rgba(139,92,246,0.35)] p-5 sticky top-0 bg-[#0e0821]/95 backdrop-blur-xl z-50 shadow-2xl shadow-[#5b21b6]/20">
+    <nav class="border-b border-[rgba(199,107,42,0.18)] p-5 sticky top-0 bg-[rgba(251,248,241,0.9)] backdrop-blur-xl z-50 shadow-2xl shadow-[rgba(104,76,43,0.08)]">
         <div class="max-w-7xl mx-auto flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-3xl bg-gradient-to-br from-[#8b5cf6] to-[#ec4899] shadow-lg shadow-[#ec4899]/20 flex items-center justify-center font-semibold text-[#0f172a]">SAM</div>
+                <div class="w-10 h-10 rounded-3xl bg-gradient-to-br from-[#e89b57] to-[#2d8a76] shadow-lg shadow-[rgba(199,107,42,0.18)] flex items-center justify-center font-semibold text-[#fff7ed]">SAM</div>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-semibold tracking-tight text-[#ede9fe]">SAM-GC</h1>
-                    <p class="text-sm text-[#c4b5fd]">Automatic co-segmentation powered by SAM + DINOv2</p>
+                    <h1 class="text-xl md:text-2xl font-semibold tracking-tight text-[#24323f]">SAM-GC</h1>
+                    <p class="text-sm text-[#6b7c8d]">Automatic co-segmentation powered by SAM + DINOv2</p>
                 </div>
             </div>
             <div class="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
-                <span class="badge">Dark Vision</span>
+                <span class="badge">Daylight Lab</span>
                 <span class="badge badge-soft">Group Reasoning</span>
                 <span class="badge badge-soft">API-first</span>
             </div>
@@ -31,30 +31,30 @@
 
     <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-4 gap-6 relative">
         <div class="lg:col-span-1 space-y-6">
-            <section class="glass-panel rounded-3xl p-6 shadow-[0_40px_120px_-110px_rgba(15,23,42,0.95)]">
+            <section class="glass-panel rounded-3xl p-6 shadow-[0_40px_120px_-110px_rgba(104,76,43,0.18)]">
                 <div class="flex items-center justify-between gap-4 mb-5">
                     <div>
-                        <h2 class="text-lg font-semibold text-[#ede9fe]">Pipeline Configuration</h2>
-                        <p class="text-sm text-[#c4b5fd] mt-1">Tune the consensus model for your scene.</p>
+                        <h2 class="text-lg font-semibold text-[#24323f]">Pipeline Configuration</h2>
+                        <p class="text-sm text-[#6b7c8d] mt-1">Tune the consensus model for your scene.</p>
                     </div>
                     <span class="badge badge-accent">v1.0</span>
                 </div>
 
                 <div class="space-y-5">
                     <div>
-                        <label class="text-xs uppercase text-[#a78bfa] font-semibold mb-1 block">IoU Threshold</label>
+                        <label class="text-xs uppercase text-[#a44d16] font-semibold mb-1 block">IoU Threshold</label>
                         <input id="iou-threshold" type="range" min="0" max="100" step="1" class="slider" value="88">
-                        <div class="flex justify-between text-xs mt-2 text-[#c4b5fd]"><span>0.00</span><span id="iou-threshold-value">0.88</span><span>1.00</span></div>
+                        <div class="flex justify-between text-xs mt-2 text-[#6b7c8d]"><span>0.00</span><span id="iou-threshold-value">0.88</span><span>1.00</span></div>
                     </div>
                     <div>
-                        <label class="text-xs uppercase text-[#a78bfa] font-semibold mb-1 block">NMS Overlay</label>
+                        <label class="text-xs uppercase text-[#a44d16] font-semibold mb-1 block">NMS Overlay</label>
                         <input id="nms-threshold" type="range" min="0" max="100" step="1" class="slider" value="45">
-                        <div class="flex justify-between text-xs mt-2 text-[#c4b5fd]"><span>0.00</span><span id="nms-threshold-value">0.45</span><span>1.00</span></div>
+                        <div class="flex justify-between text-xs mt-2 text-[#6b7c8d]"><span>0.00</span><span id="nms-threshold-value">0.45</span><span>1.00</span></div>
                     </div>
-                    <div class="pt-3 border-t border-[#5b21b6]/40">
+                    <div class="pt-3 border-t border-[rgba(199,107,42,0.16)]">
                         <label class="flex items-center gap-3 cursor-pointer">
                             <input id="presence-detection" type="checkbox" checked class="toggle-checkbox">
-                            <span class="text-sm text-[#c4b5fd]">Enable Presence Detection Head</span>
+                            <span class="text-sm text-[#6b7c8d]">Enable Presence Detection Head</span>
                         </label>
                     </div>
                 </div>
@@ -63,27 +63,27 @@
             <section class="glass-panel rounded-3xl p-6">
                 <div class="flex items-center justify-between mb-5">
                     <div>
-                        <h2 class="text-lg font-semibold text-[#ede9fe]">Execution Steps</h2>
-                        <p class="text-sm text-[#c4b5fd] mt-1">Follow the consensus pipeline phases.</p>
+                        <h2 class="text-lg font-semibold text-[#24323f]">Execution Steps</h2>
+                        <p class="text-sm text-[#6b7c8d] mt-1">Follow the consensus pipeline phases.</p>
                     </div>
                     <span class="badge badge-soft">Realtime</span>
                 </div>
                 <div id="steps-container" class="space-y-4">
                     <div class="step-card" id="step-1">
-                        <div class="text-sm font-semibold text-[#ede9fe]">1. Proposal Generation</div>
-                        <div class="text-xs text-[#c4b5fd]">32x32 SAM grid proposals</div>
+                        <div class="text-sm font-semibold text-[#24323f]">1. Proposal Generation</div>
+                        <div class="text-xs text-[#6b7c8d]">Automatic mask candidate generation</div>
                     </div>
                     <div class="step-card" id="step-2">
-                        <div class="text-sm font-semibold text-[#ede9fe]">2. Feature Extraction</div>
-                        <div class="text-xs text-[#c4b5fd]">DINOv2 semantic descriptors</div>
+                        <div class="text-sm font-semibold text-[#24323f]">2. Feature Extraction</div>
+                        <div class="text-xs text-[#6b7c8d]">DINOv2 semantic descriptors</div>
                     </div>
                     <div class="step-card" id="step-3">
-                        <div class="text-sm font-semibold text-[#ede9fe]">3. Graph Consensus</div>
-                        <div class="text-xs text-[#c4b5fd]">SCO-based object alignment</div>
+                        <div class="text-sm font-semibold text-[#24323f]">3. Graph Consensus</div>
+                        <div class="text-xs text-[#6b7c8d]">Mask-aware object alignment</div>
                     </div>
                     <div class="step-card" id="step-4">
-                        <div class="text-sm font-semibold text-[#ede9fe]">4. Result Calibration</div>
-                        <div class="text-xs text-[#c4b5fd]">Threshold and mask fusion</div>
+                        <div class="text-sm font-semibold text-[#24323f]">4. Result Calibration</div>
+                        <div class="text-xs text-[#6b7c8d]">Thresholding, scoring, and labeling</div>
                     </div>
                 </div>
             </section>
@@ -91,18 +91,18 @@
 
         <div class="lg:col-span-3 space-y-6">
             <section class="glass-panel rounded-[2.5rem] p-10 overflow-hidden relative">
-                <div class="absolute -right-16 top-8 w-40 h-40 bg-gradient-to-br from-[#8b5cf6]/20 to-transparent rounded-full blur-3xl"></div>
-                <div class="absolute -left-16 bottom-10 w-52 h-52 bg-gradient-to-br from-[#ec4899]/10 to-transparent rounded-full blur-3xl"></div>
+                <div class="absolute -right-16 top-8 w-40 h-40 bg-gradient-to-br from-[#f0c79a]/45 to-transparent rounded-full blur-3xl"></div>
+                <div class="absolute -left-16 bottom-10 w-52 h-52 bg-gradient-to-br from-[#79b5a7]/20 to-transparent rounded-full blur-3xl"></div>
                 <div class="flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
                     <div class="max-w-xl">
-                        <p class="text-sm uppercase tracking-[0.3em] mb-3 text-[#f9a8d4]">Co-Segmentation Lab</p>
-                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#ede9fe]">Visual consensus at scale.</h2>
-                        <p class="mt-4 text-[#c4b5fd] text-base leading-7">Drop images from a common scene to automatically identify the shared object across the set. Designed for research explorations and rapid image-level reasoning.</p>
+                        <p class="text-sm uppercase tracking-[0.3em] mb-3 text-[#a44d16]">Co-Segmentation Lab</p>
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#24323f]">Discovering visual consensus, one pixel at a time.</h2>
+                        <p class="mt-4 text-[#6b7c8d] text-base leading-7">Drop images to automatically identify the shared object across the set. Designed for research explorations and rapid image-level reasoning.</p>
                     </div>
                     <div class="grid grid-cols-2 gap-3 text-center">
                         <div class="feature-card">
                             <span>Group Images</span>
-                            <strong>3–8</strong>
+                            <strong>3-8</strong>
                         </div>
                         <div class="feature-card">
                             <span>Mask Quality</span>
@@ -112,40 +112,40 @@
                 </div>
             </section>
 
-            <div id="drop-zone" class="border-2 border-dashed border-[#8b5cf6]/40 rounded-[2rem] p-12 text-center transition-all cursor-pointer hover:border-[#ec4899]/60 hover:bg-[#140823]/90 group">
+            <div id="drop-zone" class="border-2 border-dashed border-[rgba(199,107,42,0.28)] rounded-[2rem] p-12 text-center transition-all cursor-pointer hover:border-[rgba(45,138,118,0.55)] hover:bg-[rgba(255,247,237,0.8)] group">
                 <input type="file" id="file-input" multiple accept="image/*" class="hidden">
                 <div class="flex flex-col items-center gap-4">
-                    <div class="w-20 h-20 rounded-full bg-[#13061f]/80 border border-[#8b5cf6]/30 flex items-center justify-center text-[#f9a8d4] shadow-inner shadow-[#1f0738]/40 transition-all group-hover:scale-105">
+                    <div class="w-20 h-20 rounded-full bg-[rgba(255,244,229,0.95)] border border-[rgba(199,107,42,0.22)] flex items-center justify-center text-[#c76b2a] shadow-inner shadow-[rgba(199,107,42,0.08)] transition-all group-hover:scale-105">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-semibold text-[#ede9fe]">Drop an image group</h3>
-                        <p class="text-[#c4b5fd] mt-2 text-base max-w-2xl mx-auto">Upload 3 to 8 images with a shared object and let the graph-based co-segmentation engine discover the common mask.</p>
+                        <h3 class="text-3xl font-semibold text-[#24323f]">Drop an image group</h3>
+                        <p class="text-[#6b7c8d] mt-2 text-base max-w-2xl mx-auto">Upload 3 to 8 images with a shared object and let the graph-based co-segmentation engine discover the common mask.</p>
                     </div>
-                    <p id="drop-summary" class="text-sm text-[#c4b5fd]/90">Supported formats: JPEG, PNG, WEBP</p>
+                    <p id="drop-summary" class="text-sm text-[#6b7c8d]">Supported formats: JPG, JPEG, PNG, WEBP</p>
                 </div>
             </div>
 
             <div id="processing-view" class="hidden space-y-6">
-                <div class="glass-panel rounded-[2.5rem] p-6 border border-[#8b5cf6]/30 backdrop-blur-xl">
+                <div class="glass-panel rounded-[2.5rem] p-6 border border-[rgba(199,107,42,0.18)] backdrop-blur-xl">
                     <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
                         <div class="space-y-2">
-                            <div class="inline-flex items-center gap-3 rounded-full bg-[#12082f]/90 px-4 py-2 text-sm font-semibold text-[#ede9fe] shadow-lg shadow-[#5b21b6]/20">
-                                <span id="status-indicator" class="w-3 h-3 rounded-full bg-[#ec4899] animate-pulse"></span>
+                            <div class="inline-flex items-center gap-3 rounded-full bg-[rgba(255,244,229,0.98)] px-4 py-2 text-sm font-semibold text-[#24323f] shadow-lg shadow-[rgba(104,76,43,0.08)]">
+                                <span id="status-indicator" class="w-3 h-3 rounded-full bg-[#c76b2a] animate-pulse"></span>
                                 Active group reasoning
                             </div>
-                            <p class="text-sm text-[#c4b5fd]">Run the pipeline and inspect the consensus masks on the selected images.</p>
+                            <p class="text-sm text-[#6b7c8d]">Run the pipeline and inspect the consensus masks on the selected images.</p>
                         </div>
                         <div class="flex flex-wrap gap-3 justify-center xl:justify-end">
-                            <button id="reset-btn" class="px-5 py-2 rounded-full bg-[#180b2f]/90 hover:bg-[#24144d] text-sm font-medium text-[#ede9fe] transition-colors border border-[#8b5cf6]/25">Reset</button>
-                            <button id="run-btn" class="px-6 py-2 rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#ec4899] hover:from-[#7c3aed] hover:to-[#f472b6] text-sm font-semibold text-[#0f172a] transition-all shadow-xl shadow-[#ec4899]/20">Execute Pipeline</button>
+                            <button id="reset-btn" class="px-5 py-2 rounded-full bg-[rgba(255,255,255,0.86)] hover:bg-[rgba(255,248,238,1)] text-sm font-medium text-[#24323f] transition-colors border border-[rgba(199,107,42,0.18)]">Reset</button>
+                            <button id="run-btn" class="px-6 py-2 rounded-full bg-gradient-to-r from-[#e89b57] to-[#c76b2a] hover:from-[#d78842] hover:to-[#a44d16] text-sm font-semibold text-[#fff7ed] transition-all shadow-xl shadow-[rgba(199,107,42,0.18)]">Execute Pipeline</button>
                         </div>
                     </div>
                 </div>
 
                 <div id="image-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"></div>
 
-                <section class="glass-panel rounded-[2.5rem] p-6 border border-[#8b5cf6]/25 shadow-[0_40px_120px_-110px_rgba(15,23,42,0.9)]">
+                <section class="glass-panel rounded-[2.5rem] p-6 border border-[rgba(199,107,42,0.16)] shadow-[0_40px_120px_-110px_rgba(104,76,43,0.2)]">
                     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                         <div class="metric-card">
                             <span class="metric-label">Global Affinity</span>
@@ -164,9 +164,9 @@
                             <strong id="metric-nodes" class="metric-value">--</strong>
                         </div>
                     </div>
-                    <div class="mt-6 pt-5 border-t border-[#8b5cf6]/20">
-                        <div class="text-xs uppercase tracking-[0.2em] text-[#a78bfa] font-semibold mb-2">Common Object Label</div>
-                        <div id="common-object-label" class="text-lg font-semibold text-[#f9a8d4]">--</div>
+                    <div class="mt-6 pt-5 border-t border-[rgba(199,107,42,0.14)]">
+                        <div class="text-xs uppercase tracking-[0.2em] text-[#a44d16] font-semibold mb-2">Common Object Label</div>
+                        <div id="common-object-label" class="text-lg font-semibold text-[#2d8a76]">--</div>
                     </div>
                 </section>
             </div>

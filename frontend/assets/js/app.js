@@ -42,7 +42,7 @@ function setDropSummary(text) {
 function updateDropState(fileCount) {
     const countText = fileCount === 1 ? '1 image selected' : `${fileCount} images selected`;
     const mode = fileCount >= 3 ? 'Ready to execute consensus.' : 'Add at least 3 images.';
-    setDropSummary(`${countText} · ${mode}`);
+    setDropSummary(`${countText} - ${mode}`);
 }
 
 // UI Interactions
@@ -99,7 +99,7 @@ function renderCard(index, src) {
         <img src="${src}" alt="Uploaded image ${index + 1}">
         <canvas id="mask-canvas-${index}" class="mask-canvas"></canvas>
         <div class="image-label">IMAGE ${index + 1}</div>
-        <div id="object-label-${index}" class="image-label" style="top: 1rem; bottom: auto; background: rgba(14, 116, 144, 0.8); border-color: rgba(56, 189, 248, 0.35); opacity: 0; transition: opacity 0.25s ease;"></div>
+        <div id="object-label-${index}" class="image-label" style="top: 1rem; bottom: auto; background: rgba(255, 247, 237, 0.96); border-color: rgba(199, 107, 42, 0.24); color: #24323f; opacity: 0; transition: opacity 0.25s ease;"></div>
         <div id="loader-${index}" class="loader-overlay show">
             <div class="loader-spinner"></div>
         </div>
@@ -188,7 +188,7 @@ async function runPipeline() {
 
     runBtn.disabled = false;
     runBtn.innerText = 'Run SAM-GC Again';
-    document.getElementById('status-indicator').classList.replace('bg-blue-500', 'bg-green-500');
+    document.getElementById('status-indicator').style.backgroundColor = '#2d8a76';
 }
 
 function updateStep(step) {
